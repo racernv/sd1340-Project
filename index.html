@@ -2,14 +2,19 @@
 <html>
 <head>
 <title></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
 <script src="js\math.min.js"></script>
+<script src="js\application.js"></script>
+<link rel="stylesheet" href="css\style.css" /> 
 </head>
 
 <body>
-<div data-role="page">
+<!--home-->
+<div data-role="page" id="home">
 
 	<div data-role="header">
 		<h1>Home</h1>
@@ -17,6 +22,46 @@
 
 	<div data-role="content" align="center">	
 		<p>Page content goes here.</p>		
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy;2014 Jay Crabill</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!--length-->
+<div data-role="page" id="length">
+
+	<div data-role="header">
+		<a href="#home" data-role="button" data-mini="true" class="ui-btn-left">Back</a>
+		<h1>Length Conversion</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" align="center">
+		<h4>First Unit Value</h4>
+		<input type="text" name="firstunit" id="firstUnit" data-mini="true" />
+		<h4>First Unit Type</h4>
+		<select id="firstUnitType" data-mini="true">
+			<option value="cm">Centimeters</option>
+			<option value="in">Inches</option>
+			<option value="ft">Feet</option>
+			<option value="yd">Yards</option>
+			<option value="m">Meters</option>
+			<option value="km">Kilometers</option>
+			<option value="mi">Miles</option>
+		</select>
+		<h4>Second Unit Type</h4>
+		<select id="secondUnitType" data-mini="true">
+			<option value="cm">Centimeters</option>
+			<option value="in">Inches</option>
+			<option value="ft">Feet</option>
+			<option value="yd">Yards</option>
+			<option value="m">Meters</option>
+			<option value="km">Kilometers</option>
+			<option value="mi">Miles</option>
+		</select>
+		<button data-mini="true" onclick="lengthconversion()" >Convert</button>
+		<input type="text" name="result" id="result" data-mini="true" />
 	</div><!-- /content -->
 
 	<div data-role="footer">
