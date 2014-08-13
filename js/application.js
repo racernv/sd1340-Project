@@ -37,4 +37,3 @@ function tempconversion() {
 		winwide = winwide - contentpaddingwidth; 
 		$content.css('width',winwide + 'px').css('height',winhigh + 'px'); //Change div to maximum visible area
 	});
-
