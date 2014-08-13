@@ -1,19 +1,24 @@
 function lengthconversion() {
- $('#result').val(math.eval($('#firstUnit').val() + " " + $('#firstUnitType').val() + " to " + $('#secondUnitType').val()).valueOf());
+	var ans = math.eval($('#firstUnit').val() + " " + $('#firstUnitType').val() + " to " + $('#secondUnitType').val());
+	$('#result').val(math.format(ans, {precision: 10, notation: 'fixed'}));
 }
-
 function massconversion() {
- $('#massResult').val(math.eval($('#firstMass').val() + " " + $('#firstMassType').val() + " to " + $('#secondMassType').val()).valueOf());
+	var ans = math.eval($('#firstMass').val() + " " + $('#firstMassType').val() + " to " + $('#secondMassType').val());
+	$('#massResult').val(math.format(ans, {precision: 14}));
 }
 
 function tempconversion() {
-var status = $('#tempConv').val();
+	var status = $('#tempConv').val();
 
-if (status === "f") { 
-	 $('#tempResult').val(math.eval($('#temperature').val() + " degF to degC"));
+	if (status === "f") { 
+	var ans = math.eval($('#temperature').val() + " degF to degC");
+	
+	 $('#tempResult').val(math.format(ans, {precision: 10, notation: 'fixed'}));
 	}
-else {
-	 $('#tempResult').val(math.eval($('#temperature').val() + " degC to degF"));
+	else {
+	var ans = math.eval($('#temperature').val() + " degC to degF");
+	
+	 $('#tempResult').val(math.format(ans, {precision: 10, notation: 'fixed'}));
 	}
 
 }
