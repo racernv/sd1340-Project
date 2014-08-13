@@ -195,31 +195,24 @@
 
 	<div data-role="content">	
 		<div data-role="fieldcontain">
-		<label>Mass Value:</label>
-		<input type="text" name="firstmass" id="firstMass" data-mini="true" />
+		<label>Temperature:</label>
+		<input type="text" name="temp" id="temp" data-mini="true" />
 		</div>
 		<div data-role="fieldcontain">
-		<label>Mass Type:</label>
-		<select id="firstMassType" data-mini="true">
-			<option value="g">Gram</option>
-			<option value="kg">Kilogram</option>
-		</select>
-		</div>
-		<div data-role="fieldcontain">
-		<label>Convert To:</label>
-		<select id="secondMassType" data-mini="true">
-			<option value="g">Gram</option>
-			<option value="kg">Kilogram</option>
+		<label>Convert to:</label>
+		<select id="tempConv" data-mini="true">
+			<option value="f">Fahrenheit to Celsius</option>
+			<option value="c">Celsius to Fahrenheit</option>
 		</select>
 		</div>
 		<br>
 		<div data-role="fieldcontain">
 		<label></label>
-		<button data-mini="true" onclick="massconversion()" >Convert</button>
+		<button data-mini="true" onclick="tempconversion()" >Convert</button>
 		</div>
 		<div data-role="fieldcontain">
 		<label>Result:</label>
-		<input type="text" name="result" id="massResult" data-mini="true" />
+		<input type="text" name="result" id="tempResult" data-mini="true" />
 		</div>
 	</div><!-- /content -->
 
