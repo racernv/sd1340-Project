@@ -25,6 +25,7 @@
 			<a href="#length" data-role="button">Length</a>
 			<a href="#mass" data-role="button">Mass</a>
 			<a href="#liquid" data-role="button">Liquid</a>
+			<a href="#temp" data-role="button">Temperature</a>
 		</div>		
 	</div><!-- /content -->
 
@@ -117,6 +118,98 @@
 			<option value="oz">Ounce</option>
 			<option value="lb">Pound</option>
 			<option value="ton">Ton</option>
+		</select>
+		</div>
+		<br>
+		<div data-role="fieldcontain">
+		<label></label>
+		<button data-mini="true" onclick="massconversion()" >Convert</button>
+		</div>
+		<div data-role="fieldcontain">
+		<label>Result:</label>
+		<input type="text" name="result" id="massResult" data-mini="true" />
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy;2014 Jay Crabill</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!--liquid-->
+<div data-role="page" id="liquid"  data-theme="b">
+
+	<div data-role="header">
+		<a href="#home" data-role="button" data-mini="true" class="ui-btn-left">Back</a>
+		<h1>Liquid Conversion</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div data-role="fieldcontain">
+		<label>Mass Value:</label>
+		<input type="text" name="firstmass" id="firstMass" data-mini="true" />
+		</div>
+		<div data-role="fieldcontain">
+		<label>Mass Type:</label>
+		<select id="firstMassType" data-mini="true">
+			<option value="g">Gram</option>
+			<option value="kg">Kilogram</option>
+			<option value="oz">Ounce</option>
+			<option value="lb">Pound</option>
+			<option value="ton">Ton</option>
+		</select>
+		</div>
+		<div data-role="fieldcontain">
+		<label>Convert To:</label>
+		<select id="secondMassType" data-mini="true">
+			<option value="g">Gram</option>
+			<option value="kg">Kilogram</option>
+			<option value="oz">Ounce</option>
+			<option value="lb">Pound</option>
+			<option value="ton">Ton</option>
+		</select>
+		</div>
+		<br>
+		<div data-role="fieldcontain">
+		<label></label>
+		<button data-mini="true" onclick="massconversion()" >Convert</button>
+		</div>
+		<div data-role="fieldcontain">
+		<label>Result:</label>
+		<input type="text" name="result" id="massResult" data-mini="true" />
+		</div>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>&copy;2014 Jay Crabill</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!--temp-->
+<div data-role="page" id="temp"  data-theme="b">
+
+	<div data-role="header">
+		<a href="#home" data-role="button" data-mini="true" class="ui-btn-left">Back</a>
+		<h1>Temperature Conversion</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+		<div data-role="fieldcontain">
+		<label>Mass Value:</label>
+		<input type="text" name="firstmass" id="firstMass" data-mini="true" />
+		</div>
+		<div data-role="fieldcontain">
+		<label>Mass Type:</label>
+		<select id="firstMassType" data-mini="true">
+			<option value="g">Gram</option>
+			<option value="kg">Kilogram</option>
+		</select>
+		</div>
+		<div data-role="fieldcontain">
+		<label>Convert To:</label>
+		<select id="secondMassType" data-mini="true">
+			<option value="g">Gram</option>
+			<option value="kg">Kilogram</option>
 		</select>
 		</div>
 		<br>
