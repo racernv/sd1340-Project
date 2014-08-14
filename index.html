@@ -1,158 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>The Simple Converter</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
-<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
-<script src="js/math.min.js"></script>
-<script src="js/application.js"></script>
-<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" /> 
-<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" />
-<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" />
-<link rel="stylesheet" href="css/font-awesome.min.css" /> 
-<link rel="stylesheet" href="css/fonts.css" /> 
-</head>
+	<head>
+		<title>The Simple Converter</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+		<script src="js/math.min.js"></script>
+		<script src="js/application.js"></script>
+		<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" /> 
+		<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" />
+		<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" /> 
+		<link rel="stylesheet" href="css/fonts.css" /> 
+	</head>
 
-<body>
-<!--home-->
-<div data-role="page" id="home"  data-theme="b">
+	<body>
+		<!--home-->
+		<div data-role="page" id="home"  data-theme="b">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+				<h1>Jays Conversion App</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">	
+					<li >
+						<a href="#length" data-ajax="false"><i class='fa fa-chevron-right'></i> Length</a>
+					</li>
+					<li >
+						<a href="#mass" data-ajax="false"><i class='fa fa-chevron-right'></i> Mass</a>
+					</li>
+					<li >
+						<a href="#liquid" data-ajax="false"><i class='fa fa-chevron-right'></i> Liquid</a>
+					</li>
+					<li >
+						<a href="#temp" data-ajax="false"><i class='fa fa-chevron-right'></i> Temperature</a>
+					</li>
+				</ul>		
+			</div><!-- /content -->
+		</div><!-- /page -->
 
-    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-		<h1>Jays Conversion App</h1>
-	</div><!-- /header -->
+		<!--length-->
+		<div data-role="page" id="length"  data-theme="b">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+				<a href="#home" data-ajax="false"><i class='fa fa-backward'></i></a>
+				<h1>Length Conversion</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<form>
+					<ul data-role="listview" data-inset="true">
+						<li data-role="fieldcontain">
+							<label>Length Value:</label>
+							<input type="text" name="firstunit" id="firstUnit" value="" data-clear-btn="true" placeholder="0">
+						</li>
+						<li data-role="fieldcontain">
+							<label>Length Type:</label>
+							<select id="firstUnitType" data-native-menu="true">
+								<option value="mm">Millimeters</option>
+								<option value="cm">Centimeters</option>
+								<option value="m">Meters</option>
+								<option value="km">Kilometers</option>
+								<option value="in">Inches</option>
+								<option value="ft">Feet</option>
+								<option value="yd">Yards</option>
+								<option value="mi">Miles</option>
+							</select>
+						</li>
+						<li data-role="fieldcontain">
+							<label>Convert To:</label>
+							<select id="secondUnitType" data-native-menu="true">
+								<option value="mm">Millimeters</option>
+								<option value="cm">Centimeters</option>
+								<option value="m">Meters</option>
+								<option value="km">Kilometers</option>
+								<option value="in">Inches</option>
+								<option value="ft">Feet</option>
+								<option value="yd">Yards</option>
+								<option value="mi">Miles</option>
+							</select>
+						</li>
+						<br>		
+						<li data-role="fieldcontain">
+							<label></label>
+							<button data-mini="true" onclick="lengthconversion()" >Convert</button>
+						</li>		
+						<li data-role="fieldcontain">
+							<label>Result:</label>
+								<input type="text" name="result" id="result" value="" data-clear-btn="true">
+						</li>
+					</ul>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
 
-	<div data-role="content">
-		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">	
-			<li >
-				<a href="#length" data-ajax="false"><i class='fa fa-chevron-right'></i> Length</a>
-	        </li>
-			<li >
-				<a href="#mass" data-ajax="false"><i class='fa fa-chevron-right'></i> Mass</a>
-	        </li>
-			<li >
-				<a href="#liquid" data-ajax="false"><i class='fa fa-chevron-right'></i> Liquid</a>
-	        </li>
-			<li >
-				<a href="#temp" data-ajax="false"><i class='fa fa-chevron-right'></i> Temperature</a>
-	        </li>
-		</ul>		
-	</div><!-- /content -->
-</div><!-- /page -->
-
-<!--length-->
-<div data-role="page" id="length"  data-theme="b">
-
-        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-            <a href="index.html" data-ajax="false"><i class='fa fa-backward'></i></a>
-            <h1>Length Conversion</h1>
-        </div><!-- /header -->
-
-	<div data-role="content">
-	<form>
-	<ul data-role="listview" data-inset="true">
-	
-		<li data-role="fieldcontain">
-		<label>Length Value:</label>
-		<input type="text" name="firstunit" id="firstUnit" value="" data-clear-btn="true" placeholder="0">
-		</li>
-
-		<li data-role="fieldcontain">
-		<label>Length Type:</label>
-		<select id="firstUnitType" data-native-menu="true">
-			<option value="mm">Millimeters</option>
-			<option value="cm">Centimeters</option>
-			<option value="m">Meters</option>
-			<option value="km">Kilometers</option>
-			<option value="in">Inches</option>
-			<option value="ft">Feet</option>
-			<option value="yd">Yards</option>
-			<option value="mi">Miles</option>
-		</select>
-		</li>
-		<li data-role="fieldcontain">
-		<label>Convert To:</label>
-		<select id="secondUnitType" data-native-menu="true">
-			<option value="mm">Millimeters</option>
-			<option value="cm">Centimeters</option>
-			<option value="m">Meters</option>
-			<option value="km">Kilometers</option>
-			<option value="in">Inches</option>
-			<option value="ft">Feet</option>
-			<option value="yd">Yards</option>
-			<option value="mi">Miles</option>
-		</select>
-		</li>
-		
-		<br>
-		
-		<li data-role="fieldcontain">
-		<label></label>
-		<button data-mini="true" onclick="lengthconversion()" >Convert</button>
-		</li>
-		
-		<li data-role="fieldcontain">
-		<label>Result:</label>
-		<input type="text" name="result" id="result" value="" data-clear-btn="true">
-		</li>
-		</ul>
-		</form>
-	</div><!-- /content -->
-</div><!-- /page -->
-
-<!--mass-->
-<div data-role="page" id="mass"  data-theme="b">
-
-	<div data-role="header">
-		<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"> Back</a>
-		<h1>Mass Conversion</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-		<div data-role="fieldcontain">
-		<label>Mass Value:</label>
-		<input type="text" name="firstmass" id="firstMass" data-mini="true" />
-		</div>
-		<div data-role="fieldcontain">
-		<label>Mass Type:</label>
-		<select id="firstMassType" data-mini="true">
-			<option value="g">Gram</option>
-			<option value="kg">Kilogram</option>
-			<option value="oz">Ounce</option>
-			<option value="lb">Pound</option>
-			<option value="ton">Ton</option>
-			<option value="tonne">Tonne</option>
-		</select>
-		</div>
-		<div data-role="fieldcontain">
-		<label>Convert To:</label>
-		<select id="secondMassType" data-mini="true">
-			<option value="g">Gram</option>
-			<option value="kg">Kilogram</option>
-			<option value="oz">Ounce</option>
-			<option value="lb">Pound</option>
-			<option value="ton">Ton</option>
-			<option value="tonne">Tonne</option>
-
-		</select>
-		</div>
-		<br>
-		<div data-role="fieldcontain">
-		<label></label>
-		<button data-mini="true" onclick="massconversion()" >Convert</button>
-		</div>
-		<div data-role="fieldcontain">
-		<label>Result:</label>
-		<input type="text" name="result" id="massResult" data-mini="true" />
-		</div>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>&copy;2014 Jay Crabill</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+		<!--mass-->
+		<div data-role="page" id="mass"  data-theme="b">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+				<a href="#home" data-ajax="false"><i class='fa fa-backward'></i></a>
+				<h1>Mass Conversion</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<form>
+					<ul data-role="listview" data-inset="true">
+						<li data-role="fieldcontain">
+							<label>Mass Value:</label>
+							<input type="text" name="firstunit" id="firstMass" value="" data-clear-btn="true" placeholder="0">
+						</li>	
+						<li data-role="fieldcontain">
+							<label>Mass Value:</label>
+							<input type="text" name="firstmass" id="firstMass" data-mini="true" />
+						</li>
+						<li data-role="fieldcontain">
+							<label>Mass Type:</label>
+							<select id="firstMassType" data-mini="true">
+								<option value="g">Gram</option>
+								<option value="kg">Kilogram</option>
+								<option value="oz">Ounce</option>
+								<option value="lb">Pound</option>
+								<option value="ton">Ton</option>
+								<option value="tonne">Tonne</option>
+							</select>
+						</li>
+						<li data-role="fieldcontain">
+							<label>Convert To:</label>
+							<select id="secondMassType" data-mini="true">
+								<option value="g">Gram</option>
+								<option value="kg">Kilogram</option>
+								<option value="oz">Ounce</option>
+								<option value="lb">Pound</option>
+								<option value="ton">Ton</option>
+								<option value="tonne">Tonne</option>
+							</select>
+						</li>
+						<br>
+						<li data-role="fieldcontain">
+							<label></label>
+							<button data-mini="true" onclick="massconversion()" >Convert</button>
+						</li>
+						<li data-role="fieldcontain">
+							<label>Result:</label>
+							<input type="text" name="result" id="massResult" data-mini="true" />
+						</li>
+					</ul>
+				</form>
+			</div><!-- /content -->
+		SSSS</div><!-- /page -->
 
 <!--liquid-->
 <div data-role="page" id="liquid"  data-theme="b">
