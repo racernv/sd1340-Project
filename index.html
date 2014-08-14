@@ -21,40 +21,47 @@
 <div data-role="page" id="home"  data-theme="b">
 
     <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
-		<h1>Home</h1>
+		<h1>Jays Conversion App</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<h3 id="jays" align="center">Jays Conversion App</h3>
-		<div data-role="controlgroup">
-			<a href="#length" data-role="button">Length</a>
-			<a href="#mass" data-role="button">Mass</a>
-			<a href="#liquid" data-role="button">Liquid</a>
-			<a href="#temp" data-role="button">Temperature</a>
-		</div>		
+		<ul data-role="listview" data-inset="false" data-icon="false" data-divider-theme="b">	
+			<li >
+				<a href="#length" data-ajax="false"><i class='fa fa-chevron-right'></i> Length</a>
+	        </li>
+			<li >
+				<a href="#mass" data-ajax="false"><i class='fa fa-chevron-right'></i> Mass</a>
+	        </li>
+			<li >
+				<a href="#liquid" data-ajax="false"><i class='fa fa-chevron-right'></i> Liquid</a>
+	        </li>
+			<li >
+				<a href="#temp" data-ajax="false"><i class='fa fa-chevron-right'></i> Temperature</a>
+	        </li>
+		</ul>		
 	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>&copy;2014 Jay Crabill</h4>
-	</div><!-- /footer -->
 </div><!-- /page -->
 
 <!--length-->
 <div data-role="page" id="length"  data-theme="b">
 
-	<div data-role="header">
-		<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"> Back</a>
-		<h1>Length Conversion</h1>
-	</div><!-- /header -->
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="index.html" data-ajax="false"><i class='fa fa-backward'></i></a>
+            <h1>Length Conversion</h1>
+        </div><!-- /header -->
 
-	<div data-role="content">	
-		<div data-role="fieldcontain">
+	<div data-role="content">
+	<form>
+	<ul data-role="listview" data-inset="true">
+	
+		<li data-role="fieldcontain">
 		<label>Length Value:</label>
-		<input type="text" name="firstunit" id="firstUnit" data-mini="true" />
-		</div>
-		<div data-role="fieldcontain">
+		<input type="text" name="firstunit" id="firstUnit" value="" data-clear-btn="true" placeholder="Length Value">
+		</li>
+
+		<li data-role="fieldcontain">
 		<label>Length Type:</label>
-		<select id="firstUnitType" data-mini="true">
+		<select id="firstUnitType" data-native-menu="true">
 			<option value="mm">Millimeters</option>
 			<option value="cm">Centimeters</option>
 			<option value="m">Meters</option>
@@ -64,10 +71,10 @@
 			<option value="yd">Yards</option>
 			<option value="mi">Miles</option>
 		</select>
-		</div>
-		<div data-role="fieldcontain">
+		</li>
+		<li data-role="fieldcontain">
 		<label>Convert To:</label>
-		<select id="secondUnitType" data-mini="true">
+		<select id="secondUnitType" data-native-menu="true">
 			<option value="mm">Millimeters</option>
 			<option value="cm">Centimeters</option>
 			<option value="m">Meters</option>
@@ -77,21 +84,22 @@
 			<option value="yd">Yards</option>
 			<option value="mi">Miles</option>
 		</select>
-		</div>
+		</li>
+		
 		<br>
-		<div data-role="fieldcontain">
+		
+		<li data-role="fieldcontain">
 		<label></label>
 		<button data-mini="true" onclick="lengthconversion()" >Convert</button>
-		</div>
-		<div data-role="fieldcontain">
+		</li>
+		
+		<li data-role="fieldcontain">
 		<label>Result:</label>
-		<input type="text" name="result" id="result" data-mini="true" />
-		</div>
+		<input type="text" name="result" id="result" value="" data-clear-btn="true">
+		</li>
+		</ul>
+		</form>
 	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>&copy;2014 Jay Crabill</h4>
-	</div><!-- /footer -->
 </div><!-- /page -->
 
 <!--mass-->
