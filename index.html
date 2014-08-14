@@ -9,18 +9,23 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
 <script src="js/math.min.js"></script>
 <script src="js/application.js"></script>
-<link rel="stylesheet" href="css/style.css" /> 
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.css" /> 
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.dark.css" />
+<link rel="stylesheet" href="css/jquerymobile.nativedroid.color.green.css" />
+<link rel="stylesheet" href="css/font-awesome.min.css" /> 
+<link rel="stylesheet" href="css/fonts.css" /> 
 </head>
 
 <body>
 <!--home-->
 <div data-role="page" id="home"  data-theme="b">
 
-	<div data-role="header">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
 		<h1>Home</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
+	<div data-role="content">
+		<h3 id="jays" align="center">Jays Conversion App</h3>
 		<div data-role="controlgroup">
 			<a href="#length" data-role="button">Length</a>
 			<a href="#mass" data-role="button">Mass</a>
@@ -145,7 +150,7 @@
 <div data-role="page" id="liquid"  data-theme="b">
 
 	<div data-role="header">
-		<a href="#" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"> Back</a>
+		<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"> Back</a>
 		<h1>Liquid Conversion</h1>
 	</div><!-- /header -->
 
