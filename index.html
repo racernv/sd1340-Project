@@ -144,60 +144,58 @@
 					</ul>
 				</form>
 			</div><!-- /content -->
-		SSSS</div><!-- /page -->
+		</div><!-- /page -->
 
-<!--liquid-->
-<div data-role="page" id="liquid"  data-theme="b">
-
-	<div data-role="header">
-		<a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-back"> Back</a>
-		<h1>Liquid Conversion</h1>
-	</div><!-- /header -->
-
-	<div data-role="content">	
-		<div data-role="fieldcontain">
-		<label>Liquid Value:</label>
-		<input type="text" name="firstliquid" id="firstLiquid" data-mini="true" />
-		</div>
-		<div data-role="fieldcontain">
-		<label>Liquid Type:</label>
-		<select id="firstLiquidType" data-mini="true">
-			<option value="fldz">Fluid Ounces</option>
-			<option value="cp">Cups</option>
-			<option value="pt">Pints</option>
-			<option value="qt">Quarts</option>
-			<option value="gal">Gallons</option>
-			<option value="ml">Milliliters</option>
-			<option value="l">Liters</option>
-		</select>
-		</div>
-		<div data-role="fieldcontain">
-		<label>Convert To:</label>
-		<select id="secondLiquidType" data-mini="true">
-			<option value="fldz">Fluid Ounces</option>
-			<option value="cp">Cups</option>
-			<option value="pt">Pints</option>
-			<option value="qt">Quarts</option>
-			<option value="gal">Gallons</option>
-			<option value="ml">Milliliters</option>
-			<option value="l">Liters</option>
-		</select>
-		</div>
-		<br>
-		<div data-role="fieldcontain">
-		<label></label>
-		<button data-mini="true" onclick="liquidconversion()" >Convert</button>
-		</div>
-		<div data-role="fieldcontain">
-		<label>Result:</label>
-		<input type="text" name="result" id="liquidResult" data-mini="true" />
-		</div>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>&copy;2014 Jay Crabill</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+		<!--liquid-->
+		<div data-role="page" id="liquid"  data-theme="b">
+			<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+				<a href="#home" data-ajax="false"><i class='fa fa-backward'></i></a>
+				<h1>Liquid Conversion</h1>
+			</div><!-- /header -->
+			<div data-role="content">
+				<form>
+					<ul data-role="listview" data-inset="true">
+						<li data-role="fieldcontain">
+							<label>Liquid Value:</label>
+							<input type="text" name="firstliquid" id="firstLiquid" value="" data-clear-btn="true" placeholder="0">
+						</li>
+						<li data-role="fieldcontain">
+							<label>Liquid Type:</label>
+							<select id="firstLiquidType" data-mini="true">
+								<option value="fldz">Fluid Ounces</option>
+								<option value="cp">Cups</option>
+								<option value="pt">Pints</option>
+								<option value="qt">Quarts</option>
+								<option value="gal">Gallons</option>
+								<option value="ml">Milliliters</option>
+								<option value="l">Liters</option>
+							</select>
+						</li>
+						<li data-role="fieldcontain">
+							<label>Liquid Type:</label>
+							<select id="secondLiquidType" data-mini="true">
+								<option value="fldz">Fluid Ounces</option>
+								<option value="cp">Cups</option>
+								<option value="pt">Pints</option>
+								<option value="qt">Quarts</option>
+								<option value="gal">Gallons</option>
+								<option value="ml">Milliliters</option>
+								<option value="l">Liters</option>
+							</select>
+						</li>
+						<br>
+						<li data-role="fieldcontain">
+							<label></label>
+							<button data-mini="true" onclick="liquidconversion()" >Convert</button>
+						</li>
+						<li data-role="fieldcontain">
+							<label>Result:</label>
+							<input type="text" name="result" id="liquidResult" data-mini="true" />
+						</li>
+					</ul>
+				</form>
+			</div><!-- /content -->
+		</div><!-- /page -->
 
 
 <!--temp-->
