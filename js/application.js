@@ -1,5 +1,6 @@
 function lengthconversion() {
 	var checker = $('#firstUnit').val();
+	$('#result').val('');
 	if (!isNaN(checker) && checker) {
 		var ans = math.eval($('#firstUnit').val() + " " + $('#firstUnitType').val() + " to " + $('#secondUnitType').val());
 		$('#result').val(math.format(ans, {precision: 10, notation: 'fixed'}));
@@ -11,6 +12,7 @@ function lengthconversion() {
 }
 function massconversion() {
 	var checker = $('#firstMass').val();
+	$('#massResult').val('');
 	if (!isNaN(checker) && checker) {
 	var ans = math.eval($('#firstMass').val() + " " + $('#firstMassType').val() + " to " + $('#secondMassType').val());
 	$('#massResult').val(math.format(ans, {precision: 14}));
@@ -22,6 +24,7 @@ function massconversion() {
 
 function liquidconversion() {
 	var checker = $('#firstLiquid').val();
+	$('#liquidResult').val('');
 	if (!isNaN(checker) && checker) {
 	var ans = math.eval($('#firstLiquid').val() + " " + $('#firstLiquidType').val() + " to " + $('#secondLiquidType').val());
 	$('#liquidResult').val(math.format(ans, {precision: 14}));
@@ -33,6 +36,7 @@ function liquidconversion() {
 
 function tempconversion() {
 	var checker = $('#temperature').val();
+	$('#tempResult').val('');
 	if (!isNaN(checker) && checker) {
 
 	var status = $('#tempConv').val();
