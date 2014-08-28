@@ -7,7 +7,7 @@ function lengthconversion() {
 		}
 	
 	else {
-		alert('You have either not entered a value, or entered an illegal character.');
+		$( "#popupDialog1" ).popup( "open" )
 	}
 }
 function massconversion() {
@@ -18,7 +18,7 @@ function massconversion() {
 	$('#massResult').val(math.format(ans, {precision: 14}));
 			}
 	else {
-		alert('You have either not entered a value, or entered an illegal character.');
+		$( "#popupDialog2" ).popup( "open" )
 	}
 }
 
@@ -30,7 +30,7 @@ function liquidconversion() {
 	$('#liquidResult').val(math.format(ans, {precision: 14}));
 	}
 	else {
-		alert('You have either not entered a value, or entered an illegal character.');
+		$( "#popupDialog3" ).popup( "open" )
 	}
 }
 
@@ -53,7 +53,7 @@ function tempconversion() {
 	}
 	}
 	else {
-		alert('You have either not entered a value, or entered an illegal character.');
+		$( "#popupDialog4" ).popup( "open" )
 	}
 
 }
